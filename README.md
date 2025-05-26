@@ -61,4 +61,21 @@ WHERE salary > 50000;
 
 
 ## 5. What is the significance of the JOIN operation, and how does it work in PostgreSQL?
-###  Answer: 
+###  Answer: The JOIN operation is used to combine two or more tables together, where there is a relationship between the tables. 
+#### The importance of JOIN:
+- Data from different tables can be brought together and analyzed.
+- After normalizing the database, it is possible to extract related data from fragmented tables.
+- It's essential for creating reports.
+#### How works the JOIN: 
+- The JOIN operation usually joins tables by matching columns (such as primary key and foreign key).
+
+1. Example: Inner JOIN: 
+SELECT students.name, classes.class_name
+FROM students
+JOIN classes ON students.class_id = classes.id;
+
+#### Types of JOINS: 
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
