@@ -47,7 +47,18 @@ GROUP BY department;
 
 
 ##  3. What are the LIMIT and OFFSET clauses used for?
-###  Answer: 
+###  Answer: The LIMIT and OFFSET clauses are used in PostgreSQL to display a specific number of records and create pagination.
+
+#### LIMIT: It determines how many records to display
+1. Example:  SELECT * FROM students LIMIT 5;
+- Here will display 5 records. 
+
+#### OFFSET:  It determines how many records will skip.
+1. Example: SELECT * FROM students OFFSET 5;
+- here will display records except first 5 records.
+#### Both LIMIT and OFFSET: 
+- Example: SELECT * FROM students LIMIT 5 OFFSET 10;
+- here will display 5 record form 11th record.
 
 
 ## 4. Explain the purpose of the WHERE clause in a SELECT statement.
