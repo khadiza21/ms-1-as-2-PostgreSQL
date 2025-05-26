@@ -29,7 +29,21 @@ GROUP BY department;
 
 
 ## 2. What is the difference between the VARCHAR and CHAR data types?
-###  Answer: 
+###  Answer: In PostgreSQL , the "VARCHAR" and "CHAR" both data type store STRING type data types. But there have some differences. 
+
+#### CHAR(n) is Fixed length character. It contains difinte length string. As like if the length is CHAR(10) then the value will be of 10 character. If the character length less than 10 length then rest will be fill up with spaces.
+1. Example: CREATE TABLE users (
+  code CHAR(5)
+);
+
+
+#### VARCHAR (n) (Variable-length character): It support changeable length character. If the length is VARCHAR(10) then it can contain highest 10 character. Here don't fill extra space by space character.
+
+
+#### Main differences are:
+- CHAR length is fixed but VARCAHR length is Changeable.
+- CHAR, Rest place fill up by space but VARCHAR rest place not used. 
+- It's useful for Code, id and VARCHAR is usefull for name, address. 
 
 
 ##  3. What are the LIMIT and OFFSET clauses used for?
@@ -37,7 +51,13 @@ GROUP BY department;
 
 
 ## 4. Explain the purpose of the WHERE clause in a SELECT statement.
-###  Answer: 
+###  Answer: WHERE clause is used for data filter with condition. It's used for filtering a definte data from all data. 
+1. Example: SELECT * FROM students
+WHERE grade = 'A';
+- Here, in grade column only show which result grade is 'A'.
+2. SELECT * FROM employees
+WHERE salary > 50000;
+- Only showing the data thoose employees salary is more than 50,000;
 
 
 ## 5. What is the significance of the JOIN operation, and how does it work in PostgreSQL?
